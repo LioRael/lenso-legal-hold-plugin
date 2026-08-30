@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object",
+  "required":["organization_id","hold_id","title","reason","legal_authority","idempotency_key"],
+  "properties":{
+    "organization_id":{"type":"string","minLength":1,"maxLength":256},
+    "hold_id":{"type":"string","minLength":1,"maxLength":256},
+    "title":{"type":"string","minLength":1,"maxLength":300},
+    "reason":{"type":"string","minLength":1,"maxLength":4000},
+    "legal_authority":{"type":"string","minLength":1,"maxLength":1000},
+    "idempotency_key":{"type":"string","minLength":1,"maxLength":200}
+  },"additionalProperties":false
+}

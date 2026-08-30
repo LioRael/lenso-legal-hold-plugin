@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object",
+  "required":["events","next_cursor"],
+  "properties":{
+    "events":{"type":"array","maxItems":500,"items":{"$ref":"#/$defs/HoldActivity"}},
+    "next_cursor":{"type":"string","pattern":"^[0-9]+$"}
+  },"additionalProperties":false,
+  "$defs":{"HoldActivity":{"type":"object","required":["activity_id","kind","actor_subject","payload","created_at"],"properties":{
+    "activity_id":{"type":"string","pattern":"^[1-9][0-9]*$"},
+    "kind":{"type":"string"},"actor_subject":{"type":"string"},
+    "payload":{"type":"object","additionalProperties":true},
+    "created_at":{"type":"string","format":"date-time"}
+  },"additionalProperties":false}}
+}
