@@ -1,0 +1,8 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object",
+  "required":["holds","next_cursor"],
+  "properties":{
+    "holds":{"type":"array","maxItems":200,"items":{"$ref":"hold-response.schema.json"}},
+    "next_cursor":{"type":["string","null"]}
+  },"additionalProperties":false
+}

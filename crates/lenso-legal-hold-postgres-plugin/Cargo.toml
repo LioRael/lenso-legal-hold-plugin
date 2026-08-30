@@ -1,0 +1,45 @@
+[package]
+name = "lenso-legal-hold-postgres-plugin"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "Durable Legal Hold and Retention Guard Plugin for Lenso."
+
+[package.metadata.lenso]
+plugin-id = "lenso.legal-hold.postgres"
+root-slot = "legal-hold"
+
+[features]
+postgres-acceptance = []
+
+[dependencies]
+futures.workspace = true
+hex.workspace = true
+lenso.workspace = true
+lenso-auth-sdk.workspace = true
+lenso-capability-access-control.workspace = true
+lenso-capability-legal-hold = { path = "../lenso-capability-legal-hold", version = "0.1.0" }
+lenso-capability-organization-membership.workspace = true
+lenso-capability-retention-guard.workspace = true
+lenso-capability-secrets.workspace = true
+lenso-contract-runtime.workspace = true
+lenso-kernel.workspace = true
+lenso-postgres-kit.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+sqlx.workspace = true
+thiserror.workspace = true
+time.workspace = true
+uuid.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+lenso-app-plan.workspace = true
+lenso-native-adapter.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true

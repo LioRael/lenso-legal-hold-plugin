@@ -1,0 +1,6 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object",
+  "required":["organization_id","hold_id"],
+  "properties":{"organization_id":{"type":"string"},"hold_id":{"type":"string"}},
+  "additionalProperties":false
+}

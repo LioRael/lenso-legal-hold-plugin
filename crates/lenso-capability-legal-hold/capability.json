@@ -1,0 +1,15 @@
+{
+  "id": "lenso.legal-hold@1",
+  "version": "1.0.0",
+  "portable": true,
+  "cross_lane_transfer": true,
+  "operations": [
+    {"name":"create_hold","interaction":"request","request_schema":"schemas/create-hold-request.schema.json","response_schema":"schemas/hold-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"},
+    {"name":"get_hold","interaction":"request","request_schema":"schemas/get-hold-request.schema.json","response_schema":"schemas/hold-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"},
+    {"name":"list_holds","interaction":"request","request_schema":"schemas/list-holds-request.schema.json","response_schema":"schemas/list-holds-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"},
+    {"name":"add_scope","interaction":"request","request_schema":"schemas/mutate-scope-request.schema.json","response_schema":"schemas/hold-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"},
+    {"name":"remove_scope","interaction":"request","request_schema":"schemas/mutate-scope-request.schema.json","response_schema":"schemas/hold-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"},
+    {"name":"release_hold","interaction":"request","request_schema":"schemas/release-hold-request.schema.json","response_schema":"schemas/hold-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"},
+    {"name":"list_activity","interaction":"request","request_schema":"schemas/list-activity-request.schema.json","response_schema":"schemas/list-activity-response.schema.json","domain_error_schema":"schemas/legal-hold-error.schema.json"}
+  ]
+}
