@@ -4,6 +4,9 @@ Publish `lenso-capability-legal-hold` before
 `lenso-legal-hold-postgres-plugin`. Publication is manual-only from reviewed
 `main` through `.github/workflows/release-plz.yml`.
 
+`lenso-legal-hold-agent-tools-plugin` is a private linked adapter and is not
+part of the registry release set.
+
 ## Trusted Publisher configuration
 
 Configure one crates.io Trusted Publisher for each crate:

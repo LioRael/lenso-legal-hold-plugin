@@ -1,0 +1,25 @@
+[package]
+name = "lenso-legal-hold-agent-tools-plugin"
+version = "0.1.0"
+description = "Administrator Agent Tool adapter for Lenso Legal Hold."
+edition.workspace = true
+license.workspace = true
+publish = false
+repository.workspace = true
+rust-version.workspace = true
+
+[package.metadata.lenso]
+plugin-id = "lenso.legal-hold.agent-tools"
+root-slot = "tool-providers"
+
+[dependencies]
+futures.workspace = true
+lenso.workspace = true
+lenso-capability-agent-tool-provider.workspace = true
+lenso-capability-legal-hold = { version = "0.1.0", path = "../lenso-capability-legal-hold" }
+lenso-kernel.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

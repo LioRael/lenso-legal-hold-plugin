@@ -22,6 +22,11 @@ It requires exactly one Provider for each of:
 - `lenso.organization-membership@1`
 - `lenso.access-control@1`
 
+The private, stateless `lenso.legal-hold.agent-tools` adapter exposes the seven
+administrative operations to a Console Agent. It requires exactly one
+`lenso.legal-hold@1`, forwards invocation authority unchanged, and does not
+expose the Retention Guard role.
+
 Administrative requests require an exact configured caller Instance, an Auth
 ActorAssertion bound to the exact operation, active Organization membership,
 and an Access Control decision. Guard requests use a separate exact caller list
